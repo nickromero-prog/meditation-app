@@ -76,7 +76,6 @@ INSTALLED_APPS = [
     'corsheaders',
     # the api project we started
     'api',
-    'session',
 ]
 
 MIDDLEWARE = [

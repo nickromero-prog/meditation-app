@@ -3,8 +3,8 @@ from django.contrib.auth import get_user_model
 
 # Session Model (main resource)
 class Session(models.Model):
-  # time_length = models.Integer(max_length=3)
-  owner = models.ForeignKey(get_user_model(), on_delete=models.CASCADE)
+  time_length = models.IntegerField()
+  owner = models.ForeignKey(get_user_model(), related_name='sessions', on_delete=models.CASCADE)
   created_at = models.DateTimeField(auto_now_add=True)
   updated_at = models.DateTimeField(auto_now=True)
 
@@ -13,8 +13,9 @@ class Session(models.Model):
     """Returns dictionary version of Mango models"""
     return {
         'id': self.id,
-        'time_length': self.time_length
+        'time_length': self.time_length,
+        'created_at': self.created_at
     }
 
-  def __str__(self):
+  def __int__(self):
     return self.time_length

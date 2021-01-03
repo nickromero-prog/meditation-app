@@ -10,7 +10,7 @@ class Session(models.Model):
 
 
   def as_dict(self):
-    """Returns dictionary version of Mango models"""
+    """Returns dictionary version of Session models"""
     return {
         'id': self.id,
         'time_length': self.time_length,

@@ -30,7 +30,7 @@ class Sessions(generics.ListCreateAPIView):
         request.data['session']['owner'] = request.user.id
         # Serialize/create session
         session = SessionSerializer(data=request.data['session'])
-        # If the mango data is valid according to our serializer...
+        # If the session data is valid according to our serializer...
         if session.is_valid():
             # Save the created session & send a response
             session.save()

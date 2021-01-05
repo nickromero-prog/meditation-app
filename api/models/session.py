@@ -3,7 +3,7 @@ from django.contrib.auth import get_user_model
 
 # Session Model (main resource)
 class Session(models.Model):
-  time_length = models.IntegerField()
+  time_length = models.IntegerField(max_length=100)
   owner = models.ForeignKey(get_user_model(), related_name='sessions', on_delete=models.CASCADE)
   created_at = models.DateTimeField(auto_now_add=True)
   updated_at = models.DateTimeField(auto_now=True)

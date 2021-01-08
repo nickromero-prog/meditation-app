@@ -39,7 +39,7 @@ API Routes:
 | DELETE | `/sign-out`        | `users#sign-out`           |
 | PATCH  | `/change-pw`       | `users#change-password`    |
 
-## PRODUCTS
+## SESSIONS
 | Verb   | URI Pattern              | Controller#Action    |
 |:-------|:----------------         |:------------------   |
 | GET    | `/sessions/`             | `sessions#index`     |
